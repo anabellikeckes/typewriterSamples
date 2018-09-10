@@ -1,8 +1,15 @@
-﻿ export class UserModel { 
+﻿
+
+ export class UserModel { 
+
          id: number;
          name: string;
          email: string;
+         phoneNumber: string;
 }
+
+
+
 
 
     

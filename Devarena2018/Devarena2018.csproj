@@ -7,14 +7,42 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="CustomerModel.cs.ts">
+      <CustomToolNamespace>Models\CustomerModel.cs</CustomToolNamespace>
+    </None>
     <None Update="CustomerModel.ts">
       <CustomToolNamespace>Models\CustomerModel.cs</CustomToolNamespace>
     </None>
+    <None Update="GenericsModel.cs.ts">
+      <CustomToolNamespace>Models\GenericsModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="GenericsModel.ts">
+      <CustomToolNamespace>Models\GenericsModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="OrganizationController.ts">
+      <CustomToolNamespace>Controllers\OrganizationController.cs</CustomToolNamespace>
+    </None>
+    <None Update="ReportModel.cs.ts">
+      <CustomToolNamespace>Models\ReportModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ReportModel.ts">
+      <CustomToolNamespace>Models\ReportModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="RoleEnum.cs.ts">
+      <CustomToolNamespace>Enums\RoleEnum.cs</CustomToolNamespace>
+    </None>
     <None Update="RoleEnum.ts">
       <CustomToolNamespace>Enums\RoleEnum.cs</CustomToolNamespace>
+    </None>
+    <None Update="SpecificReportModel.cs.ts">
+      <CustomToolNamespace>Models\SpecificReportModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="SpecificReportModel.ts">
+      <CustomToolNamespace>Models\SpecificReportModel.cs</CustomToolNamespace>
     </None>
     <None Update="Typescript\RoleEnum.ts">
       <CustomToolNamespace>Enums\RoleEnum.cs</CustomToolNamespace>
@@ -25,8 +53,17 @@
     <None Update="Typescript\UserModel.ts">
       <CustomToolNamespace>Models\UserModel.cs</CustomToolNamespace>
     </None>
+    <None Update="UserController.ts">
+      <CustomToolNamespace>Controllers\UserController.cs</CustomToolNamespace>
+    </None>
+    <None Update="UserModel.cs.ts">
+      <CustomToolNamespace>Models\UserModel.cs</CustomToolNamespace>
+    </None>
     <None Update="UserModel.ts">
       <CustomToolNamespace>Models\UserModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="UserService.ts">
+      <CustomToolNamespace>Controllers\UserController.cs</CustomToolNamespace>
     </None>
   </ItemGroup>
 

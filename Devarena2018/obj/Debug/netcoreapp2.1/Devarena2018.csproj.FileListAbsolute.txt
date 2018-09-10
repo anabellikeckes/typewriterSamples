@@ -12,3 +12,17 @@ C:\Users\akeckes\Documents\Visual Studio 2017\Projects\Devarena2018\Devarena2018
 C:\Users\akeckes\Documents\Visual Studio 2017\Projects\Devarena2018\Devarena2018\obj\Debug\netcoreapp2.1\Devarena2018.RazorTargetAssemblyInfo.cache
 C:\Users\akeckes\Documents\Visual Studio 2017\Projects\Devarena2018\Devarena2018\obj\Debug\netcoreapp2.1\Devarena2018.dll
 C:\Users\akeckes\Documents\Visual Studio 2017\Projects\Devarena2018\Devarena2018\obj\Debug\netcoreapp2.1\Devarena2018.pdb
+D:\typewriterSamples\Devarena2018\bin\Debug\netcoreapp2.1\Devarena2018.deps.json
+D:\typewriterSamples\Devarena2018\bin\Debug\netcoreapp2.1\Devarena2018.runtimeconfig.json
+D:\typewriterSamples\Devarena2018\bin\Debug\netcoreapp2.1\Devarena2018.runtimeconfig.dev.json
+D:\typewriterSamples\Devarena2018\bin\Debug\netcoreapp2.1\Devarena2018.dll
+D:\typewriterSamples\Devarena2018\bin\Debug\netcoreapp2.1\Devarena2018.pdb
+D:\typewriterSamples\Devarena2018\obj\Debug\netcoreapp2.1\Devarena2018.csprojAssemblyReference.cache
+D:\typewriterSamples\Devarena2018\obj\Debug\netcoreapp2.1\Devarena2018.csproj.CoreCompileInputs.cache
+D:\typewriterSamples\Devarena2018\obj\Debug\netcoreapp2.1\Devarena2018.RazorAssemblyInfo.cache
+D:\typewriterSamples\Devarena2018\obj\Debug\netcoreapp2.1\Devarena2018.RazorAssemblyInfo.cs
+D:\typewriterSamples\Devarena2018\obj\Debug\netcoreapp2.1\Devarena2018.AssemblyInfoInputs.cache
+D:\typewriterSamples\Devarena2018\obj\Debug\netcoreapp2.1\Devarena2018.AssemblyInfo.cs
+D:\typewriterSamples\Devarena2018\obj\Debug\netcoreapp2.1\Devarena2018.RazorTargetAssemblyInfo.cache
+D:\typewriterSamples\Devarena2018\obj\Debug\netcoreapp2.1\Devarena2018.dll
+D:\typewriterSamples\Devarena2018\obj\Debug\netcoreapp2.1\Devarena2018.pdb
