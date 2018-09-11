@@ -11,11 +11,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Customer.ts">
+      <CustomToolNamespace>Models\CustomerModel.cs</CustomToolNamespace>
+    </None>
     <None Update="CustomerModel.cs.ts">
       <CustomToolNamespace>Models\CustomerModel.cs</CustomToolNamespace>
     </None>
     <None Update="CustomerModel.ts">
       <CustomToolNamespace>Models\CustomerModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="Generics.ts">
+      <CustomToolNamespace>Models\GenericsModel.cs</CustomToolNamespace>
     </None>
     <None Update="GenericsModel.cs.ts">
       <CustomToolNamespace>Models\GenericsModel.cs</CustomToolNamespace>
@@ -25,6 +31,9 @@
     </None>
     <None Update="OrganizationController.ts">
       <CustomToolNamespace>Controllers\OrganizationController.cs</CustomToolNamespace>
+    </None>
+    <None Update="Report.ts">
+      <CustomToolNamespace>Models\ReportModel.cs</CustomToolNamespace>
     </None>
     <None Update="ReportModel.cs.ts">
       <CustomToolNamespace>Models\ReportModel.cs</CustomToolNamespace>
@@ -37,6 +46,9 @@
     </None>
     <None Update="RoleEnum.ts">
       <CustomToolNamespace>Enums\RoleEnum.cs</CustomToolNamespace>
+    </None>
+    <None Update="SpecificReport.ts">
+      <CustomToolNamespace>Models\SpecificReportModel.cs</CustomToolNamespace>
     </None>
     <None Update="SpecificReportModel.cs.ts">
       <CustomToolNamespace>Models\SpecificReportModel.cs</CustomToolNamespace>
@@ -51,6 +63,9 @@
       <CustomToolNamespace>Models\CustomerModel.cs</CustomToolNamespace>
     </None>
     <None Update="Typescript\UserModel.ts">
+      <CustomToolNamespace>Models\UserModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="User.ts">
       <CustomToolNamespace>Models\UserModel.cs</CustomToolNamespace>
     </None>
     <None Update="UserController.ts">
@@ -69,6 +84,12 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="RoleEnum.cs">
+      <CustomToolNamespace>Enums\RoleEnum.cs</CustomToolNamespace>
+    </Compile>
   </ItemGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">

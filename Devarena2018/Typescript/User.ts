@@ -1,6 +1,8 @@
 ﻿
 
- export class UserModel { 
+
+
+export class User { 
 
          id: number;
          name: string;

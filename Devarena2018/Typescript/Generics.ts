@@ -1,6 +1,8 @@
 ﻿
 
- export class GenericsModel<T> { 
+
+
+export class Generics<T> { 
 
          result: T[];
 }

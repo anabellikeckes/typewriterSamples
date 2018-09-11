@@ -1,9 +1,12 @@
 ﻿
 
- export class ReportModel { 
+
+
+export class Customer { 
 
          id: number;
          name: string;
+         orders: string[];
 }
 
 

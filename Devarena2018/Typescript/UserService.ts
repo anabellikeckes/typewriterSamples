@@ -6,10 +6,16 @@
 
 
 export class UserService {
-      // constructor(private $http: ng.IHttpService) { }
+       constructor(private http: IHttpService) { }
 
        public getAll = () => {
-         //  return this.$http.get<UserModel>(`$Route`, {  });
+           return this.http.get<UserModel>(`api/user`, {  });
+      }
+       public get = (userId: string) => {
+           return this.http.get<void>(`api/user/{userId:Guid}`, { userId: userId });
+      }
+       public delete = (userId: string) => {
+           return this.http.delete<void>(`api/user/{userId:Guid}`, { userId: userId });
       }
 }
     
