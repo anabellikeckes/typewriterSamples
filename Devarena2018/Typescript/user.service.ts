@@ -9,7 +9,7 @@ export class UserService {
        constructor(private http: IHttpService) { }
 
        public getAll = () => {
-           return this.http.get<UserModel>(`api/user`, {  });
+           return this.http.get<User>(`api/user`, {  });
       }
        public get = (userId: string) => {
            return this.http.get<void>(`api/user/{userId:Guid}`, { userId: userId });

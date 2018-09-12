@@ -2,7 +2,7 @@
 
 
 
-export class Generics<T> { 
+export class Generics<T> {
 
          result: T[];
 }

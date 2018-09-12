@@ -2,7 +2,7 @@
 
 
 
-export class Customer { 
+export class Customer {
 
          id: number;
          name: string;

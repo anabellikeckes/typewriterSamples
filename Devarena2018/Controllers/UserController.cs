@@ -20,15 +20,15 @@ namespace Devarena2018.Controllers
         }
 
         [HttpGet]
-        [Produces(typeof(List<UserModel>))]
-        public async Task<List<UserModel>> GetAll()
+        [Produces(typeof(List<User>))]
+        public async Task<List<User>> GetAll()
         {
             await _task;
             return null;
         }
 
         [HttpGet("{userId:Guid}")]
-        public async Task<UserModel> Get(Guid userId)
+        public async Task<User> Get(Guid userId)
         {
             await _task;
             return null;

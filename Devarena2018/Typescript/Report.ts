@@ -2,7 +2,7 @@
 
 
 
-export class Report { 
+export class Report {
 
          id: number;
          name: string;

@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <None Update="Customer.ts">
-      <CustomToolNamespace>Models\CustomerModel.cs</CustomToolNamespace>
+      <CustomToolNamespace>Models\Customer.cs</CustomToolNamespace>
     </None>
     <None Update="CustomerModel.cs.ts">
       <CustomToolNamespace>Models\CustomerModel.cs</CustomToolNamespace>
@@ -21,7 +21,10 @@
       <CustomToolNamespace>Models\CustomerModel.cs</CustomToolNamespace>
     </None>
     <None Update="Generics.ts">
-      <CustomToolNamespace>Models\GenericsModel.cs</CustomToolNamespace>
+      <CustomToolNamespace>Models\Generics.cs</CustomToolNamespace>
+    </None>
+    <None Update="Genericsl.ts">
+      <CustomToolNamespace>Models\Genericsl.cs</CustomToolNamespace>
     </None>
     <None Update="GenericsModel.cs.ts">
       <CustomToolNamespace>Models\GenericsModel.cs</CustomToolNamespace>
@@ -32,8 +35,11 @@
     <None Update="OrganizationController.ts">
       <CustomToolNamespace>Controllers\OrganizationController.cs</CustomToolNamespace>
     </None>
+    <None Update="Program.ts">
+      <CustomToolNamespace>Program.cs</CustomToolNamespace>
+    </None>
     <None Update="Report.ts">
-      <CustomToolNamespace>Models\ReportModel.cs</CustomToolNamespace>
+      <CustomToolNamespace>Models\Report.cs</CustomToolNamespace>
     </None>
     <None Update="ReportModel.cs.ts">
       <CustomToolNamespace>Models\ReportModel.cs</CustomToolNamespace>
@@ -41,14 +47,20 @@
     <None Update="ReportModel.ts">
       <CustomToolNamespace>Models\ReportModel.cs</CustomToolNamespace>
     </None>
+    <None Update="Role.ts">
+      <CustomToolNamespace>Enums\Role.cs</CustomToolNamespace>
+    </None>
     <None Update="RoleEnum.cs.ts">
       <CustomToolNamespace>Enums\RoleEnum.cs</CustomToolNamespace>
     </None>
     <None Update="RoleEnum.ts">
       <CustomToolNamespace>Enums\RoleEnum.cs</CustomToolNamespace>
     </None>
+    <None Update="specific-report.ts">
+      <CustomToolNamespace>Models\SpecificReport.cs</CustomToolNamespace>
+    </None>
     <None Update="SpecificReport.ts">
-      <CustomToolNamespace>Models\SpecificReportModel.cs</CustomToolNamespace>
+      <CustomToolNamespace>Models\SpecificReport.cs</CustomToolNamespace>
     </None>
     <None Update="SpecificReportModel.cs.ts">
       <CustomToolNamespace>Models\SpecificReportModel.cs</CustomToolNamespace>
@@ -56,17 +68,14 @@
     <None Update="SpecificReportModel.ts">
       <CustomToolNamespace>Models\SpecificReportModel.cs</CustomToolNamespace>
     </None>
-    <None Update="Typescript\RoleEnum.ts">
-      <CustomToolNamespace>Enums\RoleEnum.cs</CustomToolNamespace>
+    <None Update="Startup.ts">
+      <CustomToolNamespace>Startup.cs</CustomToolNamespace>
     </None>
-    <None Update="Typescript\CustomerModel.ts">
-      <CustomToolNamespace>Models\CustomerModel.cs</CustomToolNamespace>
-    </None>
-    <None Update="Typescript\UserModel.ts">
-      <CustomToolNamespace>Models\UserModel.cs</CustomToolNamespace>
+    <None Update="User.service.ts">
+      <CustomToolNamespace>Controllers\UserController.cs</CustomToolNamespace>
     </None>
     <None Update="User.ts">
-      <CustomToolNamespace>Models\UserModel.cs</CustomToolNamespace>
+      <CustomToolNamespace>Models\User.cs</CustomToolNamespace>
     </None>
     <None Update="UserController.ts">
       <CustomToolNamespace>Controllers\UserController.cs</CustomToolNamespace>
@@ -83,13 +92,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Typescript\" />
     <Folder Include="wwwroot\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="RoleEnum.cs">
-      <CustomToolNamespace>Enums\RoleEnum.cs</CustomToolNamespace>
-    </Compile>
   </ItemGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Devarena2018.Models
 {
-    public class GenericsModel<T>
+    public class Generics<T>
     {
         public IEnumerable<T> Result { get; set; }
     }

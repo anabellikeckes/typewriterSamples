@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Devarena2018.Enums
 {
-    public enum RoleEnum
+    public enum Role
     {
         Administrator = 1,
         User = 2

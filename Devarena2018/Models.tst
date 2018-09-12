@@ -1,13 +1,19 @@
 ﻿${
     using Typewriter.Extensions.WebApi;
+    using System.Text.RegularExpressions;
     using Typewriter.Extensions.Types;
+
+     string ToKebabCase(string name){
+        return  Regex.Replace(name, "(?<!^)([A-Z][a-z]|(?<=[a-z])[A-Z])","-$1", RegexOptions.Compiled)
+                     .Trim().ToLower();
+    }
 
     string ServiceName(Class cl) => cl.Name.Replace("Controller", "Service");
     string Verb(Method m) => m.Attributes.First(a => a.Name.StartsWith("Http")).Name.Remove(0, 4).ToLowerInvariant();
 
     
     string ClassNameWithExtends (Class c) {
-        return c.Name.Replace("Model", "") +  (c.BaseClass!=null ? " extends " + c.BaseClass.Name.Replace("Model", "") : "");
+        return c.Name +  (c.BaseClass!=null ? " extends " + c.BaseClass.Name : "");
     }
 
     Template(Settings settings)
@@ -15,9 +21,9 @@
         settings.OutputFilenameFactory = file =>
         {
             if(file.Name.Contains("Controller")){
-             return $"{file.Name.Replace("Controller.cs", "Service.ts")}";
+             return ToKebabCase(file.Name.Replace("Controller.cs", ".service.ts"));
             }else{
-            return file.Name.Replace("Model.cs", ".ts");
+            return ToKebabCase(file.Name.Replace(".cs", ".ts"));
             }
         };
     }
@@ -25,19 +31,19 @@
     string Imports(Class c)
     {
         var baseType = (Type)c.BaseClass;
-        return baseType!= null? "import { " + c.BaseClass.Name.Replace("Model", "") + " } from './" + c.BaseClass.Name.Replace("Model", "") + "';": null;
+        return baseType!= null? "import { " + c.BaseClass.Name + " } from './" + ToKebabCase(c.BaseClass.Name) + "';": null;
     }
 }
 
-$Classes(*Model)[$Imports
+$Classes(Devarena2018.Models*)[$Imports
 
-export class $ClassNameWithExtends$TypeParameters { 
+export class $ClassNameWithExtends$TypeParameters {
 $Properties[
          $name: $Type;]
 }
 ]
 
-$Enums(*Enum)[export enum $Name { $Values[
+$Enums(Devarena2018.Enums*)[export enum $Name { $Values[
     $Name = $Value][,]
 }]
 

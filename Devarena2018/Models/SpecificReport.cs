@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace Devarena2018.Models
 {
-    public class ReportModel
+    public class SpecificReportModel : Report
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public const string Comment = "Comment";
     }
 }
