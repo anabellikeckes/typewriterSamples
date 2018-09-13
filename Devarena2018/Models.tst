@@ -31,24 +31,16 @@
     string Imports(Class c)
     {
         var baseType = (Type)c.BaseClass;
-        return baseType!= null? "import { " + c.BaseClass.Name + " } from './" + ToKebabCase(c.BaseClass.Name) + "';": null;
+        return baseType!= null? "import { " + c.BaseClass.Name + " } from './" + ToKebabCase(c.BaseClass.Name) + "';\n\n" : null;
     }
-}
-
-$Classes(Devarena2018.Models*)[$Imports
-
-export class $ClassNameWithExtends$TypeParameters {
+}$Classes(Devarena2018.Models*)[$Imports export class $ClassNameWithExtends$TypeParameters {
 $Properties[
-         $name: $Type;]
+        $name: $Type;]
 }
-]
-
-$Enums(Devarena2018.Enums*)[export enum $Name { $Values[
+]$Enums(Devarena2018.Enums*)[export enum $Name { $Values[
     $Name = $Value][,]
-}]
-
-$Classes(*Controller)[
-export class $ServiceName {
+}
+]$Classes(*Controller)[ export class $ServiceName {
        constructor(private http: IHttpService) { }
 $Methods[
        public $name = ($Parameters[$name: $Type][, ]) => {

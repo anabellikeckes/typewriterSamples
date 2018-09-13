@@ -7,6 +7,6 @@ namespace Devarena2018.Models
 {
     public class SpecificReportModel : Report
     {
-        public const string Comment = "Comment";
+        public string Comment = "Comment";
     }
 }

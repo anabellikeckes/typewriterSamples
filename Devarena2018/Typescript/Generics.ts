@@ -1,14 +1,7 @@
-﻿
+﻿ export class Generics<T> {
 
-
-
-export class Generics<T> {
-
-         result: T[];
+        result: T[];
+        role: Role;
 }
-
-
-
-
 
     
