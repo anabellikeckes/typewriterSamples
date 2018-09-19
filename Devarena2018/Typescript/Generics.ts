@@ -1,7 +1,11 @@
-﻿ export class Generics<T> {
+﻿import { User} from './user';
+import { Role} from './role';
 
-        result: T[];
+ export class Generics<T> {
+
+        userInfo: User[];
         role: Role;
+        editModeAvailable: boolean;
 }
 
     

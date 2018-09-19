@@ -9,7 +9,8 @@ namespace Devarena2018.Models
 
     public class Generics<T>
     {
-        public IEnumerable<T> Result { get; set; }
-        public Role Role{ get; set;} 
+        public List<User> UserInfo { get; set; }
+        public Role Role{ get; set;}
+        public bool EditModeAvailable { get; set; }
     }
 }

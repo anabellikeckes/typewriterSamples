@@ -1,4 +1,6 @@
-﻿ export class UserService {
+﻿import { Controller } from './controller';
+
+ export class UserService {
        constructor(private http: IHttpService) { }
 
        public getAll = () => {
