@@ -1,5 +1,4 @@
-﻿import { Controller } from './controller';
-
+﻿
  export class UserService {
        constructor(private http: IHttpService) { }
 

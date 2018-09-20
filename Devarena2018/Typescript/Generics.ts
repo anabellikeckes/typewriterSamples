@@ -1,5 +1,5 @@
-﻿import { User} from './user';
-import { Role} from './role';
+﻿import { User } from './user';
+import { Role } from './role';
 
  export class Generics<T> {
 
