@@ -16,20 +16,36 @@
     {
         settings.OutputFilenameFactory = file =>
         {
-             return ToKebabCase(file.Name.Replace("Controller.cs", ".service.ts"));
+             return "Typescript/Services/" + ToKebabCase(file.Name.Replace("Controller.cs", ".service.ts"));
         };
+    }
+
+    string ImportsList(Class objClass)
+    {
+        var ImportsOutput = "";
+
+        // Loop through the Methdos in the Class
+        foreach(Method objMethod in objClass.Methods)
+        {
+            foreach(var objParameter in objMethod.Type.TypeArguments)
+            {
+                    ImportsOutput = objParameter.Name;
+            }
+        }
+        // Notice: As of now this will only return one import
+        return  ImportsOutput.ToString() != "" ? $"import {{ { ImportsOutput } }} from '../Models/{ToKebabCase(ImportsOutput)}';\r\n" : null;
     }
 
     string Imports(Class c) => (c.BaseClass != null && c.BaseClass.Name != "Controller" ? "import { " + c.BaseClass.Name + " } from './" + ToKebabCase(c.BaseClass.Name) + "';\r\n" : null) +
                                c.Properties
-                                .Where(p => !p.Type.IsPrimitive || p.Type.IsEnum)
+                                .Where(p => !p.Type.IsPrimitive || p.Type.IsEnum )
                                 .Select(p => p.Type.Name)
                                 .Distinct()
                                 .Select(name => "import { " + name  + " } from './" + ToKebabCase(name.ToString()) + "';")
                                 .Aggregate("", (all,import) => $"{all}{import}\r\n")
                                 .TrimStart() + (c.BaseClass != null || c.Methods.Any(pr => !pr.Type.IsPrimitive || pr.Type.IsEnum) ? "\r\n" : "");
 
-}$Classes(*Controller)[$Imports export class $ServiceName {
+}$Classes(*Controller)[$ImportsList $Imports export class $ServiceName {
        constructor(private http: IHttpService) { }
 $Methods[
        public $name = ($Parameters[$name: $Type][, ]) => {

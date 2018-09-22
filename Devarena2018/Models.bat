@@ -1,3 +1,2 @@
-if not exist Typescript mkdir Typescript
-del /q Typescript\*
-move /y *.ts Typescript
+del /q Typescript\Models*
+move /y *.ts Typescript\Models

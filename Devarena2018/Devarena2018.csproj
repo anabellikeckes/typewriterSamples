@@ -11,6 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Controllers\user.service.ts">
+      <CustomToolNamespace>Controllers\UserController.cs</CustomToolNamespace>
+    </None>
     <None Update="Customer.ts">
       <CustomToolNamespace>Models\Customer.cs</CustomToolNamespace>
     </None>
@@ -71,6 +74,9 @@
     <None Update="Startup.ts">
       <CustomToolNamespace>Startup.cs</CustomToolNamespace>
     </None>
+    <None Update="Typescript\Services\user.service.ts">
+      <CustomToolNamespace>Controllers\UserController.cs</CustomToolNamespace>
+    </None>
     <None Update="User.service.ts">
       <CustomToolNamespace>Controllers\UserController.cs</CustomToolNamespace>
     </None>
@@ -92,7 +98,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Typescript\" />
+    <Folder Include="Typescript\Models\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
