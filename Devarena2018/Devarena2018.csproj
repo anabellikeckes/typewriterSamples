@@ -6,13 +6,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Interfaces.tst" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Interfaces.tst" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Controllers\user.service.ts">
-      <CustomToolNamespace>Controllers\UserController.cs</CustomToolNamespace>
+    <None Update="base-interface.ts">
+      <CustomToolNamespace>Models\BaseInterface.cs</CustomToolNamespace>
     </None>
     <None Update="Customer.ts">
       <CustomToolNamespace>Models\Customer.cs</CustomToolNamespace>
@@ -73,6 +81,9 @@
     </None>
     <None Update="Startup.ts">
       <CustomToolNamespace>Startup.cs</CustomToolNamespace>
+    </None>
+    <None Update="Typescript\Interfaces\base-interface.ts">
+      <CustomToolNamespace>Interfaces\BaseInterface.cs</CustomToolNamespace>
     </None>
     <None Update="Typescript\Services\user.service.ts">
       <CustomToolNamespace>Controllers\UserController.cs</CustomToolNamespace>
