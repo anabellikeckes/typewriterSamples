@@ -20,7 +20,7 @@
     }
 
     string RemoveArrayFromImport(string propertyName){
-        return propertyName.Replace("[]","");
+                return propertyName.Replace("[]","");
     }
 
     string Imports(Class c) => (c.BaseClass != null && c.BaseClass.Name != "Controller" ? "import { " + c.BaseClass.Name + " } from './" + ToKebabCase(c.BaseClass.Name) + "';\r\n" : null) +
@@ -28,7 +28,7 @@
                                 .Where(p => !p.Type.IsPrimitive || p.Type.IsEnum)
                                 .Select(p => RemoveArrayFromImport(p.Type.Name))
                                 .Distinct()
-                                .Select(name => "import { " + name  + " } from './" + ToKebabCase(name.ToString()) + "';")
+                                .Select(name => name != "T" ? "import { " + name  + " } from './" + ToKebabCase(name.ToString()) + "';" : null)
                                 .Aggregate("", (all,import) => $"{all}{import}\r\n")
                                 .TrimStart() + (c.BaseClass != null || c.Properties.Any(pr => !pr.Type.IsPrimitive || pr.Type.IsEnum) ? "\r\n" : "");
 
