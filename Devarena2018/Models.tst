@@ -32,12 +32,20 @@
                                 .Aggregate("", (all,import) => $"{all}{import}\r\n")
                                 .TrimStart() + (c.BaseClass != null || c.Properties.Any(pr => !pr.Type.IsPrimitive || pr.Type.IsEnum) ? "\r\n" : "");
 
-}$Classes(Devarena2018.Models*)[$Imports export class $ClassNameWithExtends$TypeParameters {
+    string checkAbstract(Class c){
+    if(c.IsAbstract){
+     return "abstract";
+     } else{
+     return null;
+     }
+    }
+
+}$Classes(Devarena2018.Models*)[$Imports export $checkAbstract class $ClassNameWithExtends$TypeParameters {
 $Properties[
-        $name: $Type;]
+       $name: $Type;]
 }
-]$Enums(Devarena2018.Enums*)[export enum $Name { $Values[
+]$Enums(Devarena2018.Enums*)[export enum $Name {
+$Values[
     $Name = $Value][,]
-}
-]
+}]
     

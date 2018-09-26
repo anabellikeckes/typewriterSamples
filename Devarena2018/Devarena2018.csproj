@@ -22,6 +22,9 @@
     <None Update="base-interface.ts">
       <CustomToolNamespace>Models\BaseInterface.cs</CustomToolNamespace>
     </None>
+    <None Update="client.ts">
+      <CustomToolNamespace>Models\Client.cs</CustomToolNamespace>
+    </None>
     <None Update="Customer.ts">
       <CustomToolNamespace>Models\Customer.cs</CustomToolNamespace>
     </None>

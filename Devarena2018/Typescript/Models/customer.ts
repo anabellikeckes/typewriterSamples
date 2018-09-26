@@ -1,8 +1,8 @@
-﻿ export class Customer {
+﻿ export  class Customer {
 
-        id: number;
-        name: string;
-        orders: string[];
+       id: number;
+       name: string;
+       orders: string[];
 }
 
     

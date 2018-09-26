@@ -1,7 +1,7 @@
-﻿ export class Report {
+﻿ export abstract class Report {
 
-        id: number;
-        name: string;
+       id: number;
+       name: string;
 }
 
     

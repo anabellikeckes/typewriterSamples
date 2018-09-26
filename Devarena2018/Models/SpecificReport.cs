@@ -7,6 +7,10 @@ namespace Devarena2018.Models
 {
     public class SpecificReportModel : Report
     {
-        public string Comment = "Comment";
+
+        public  string ReportName()
+        {
+            return this.Name;
+        }
     }
 }
