@@ -5,12 +5,9 @@ using System.Threading.Tasks;
 
 namespace Devarena2018.Models
 {
-    public class SpecificReportModel : Report
+    public class SpecificReport : Report
     {
+        public string SpecificProperty { get; set; }
 
-        public  string ReportName()
-        {
-            return this.Name;
-        }
     }
 }
