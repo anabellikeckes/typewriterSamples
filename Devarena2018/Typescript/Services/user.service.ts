@@ -1,6 +1,6 @@
 ﻿import { User } from '../Models/user';
  
- export class UserService {
+export class UserService {
        constructor(private http: IHttpService) { }
 
        public getAll = () => {

@@ -15,7 +15,7 @@ namespace Devarena2018.Models
 
         public string PhoneNumber { get; set; }
 
-        public bool IsActive { get; set; }
+        //public bool IsActive { get; set; }
 
     }
 }

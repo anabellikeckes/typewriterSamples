@@ -3,7 +3,7 @@
     using System.Text.RegularExpressions;
     using Typewriter.Extensions.Types;
 
-     string ToKebabCase(string name){
+     string ToKebabCase(string name) {
         return  Regex.Replace(name, "(?<!^)([A-Z][a-z]|(?<=[a-z])[A-Z])","-$1", RegexOptions.Compiled)
                      .Trim().ToLower();
     }
@@ -20,7 +20,7 @@
         };
     }
 
-    string ImportsList(Class objClass)
+    string Imports(Class objClass)
     {
         var ImportsOutput = "";
 
@@ -36,16 +36,8 @@
         return  ImportsOutput.ToString() != "" ? $"import {{ { ImportsOutput } }} from '../Models/{ToKebabCase(ImportsOutput)}';\r\n" : null;
     }
 
-    string Imports(Class c) => (c.BaseClass != null && c.BaseClass.Name != "Controller" ? "import { " + c.BaseClass.Name + " } from './" + ToKebabCase(c.BaseClass.Name) + "';\r\n" : null) +
-                               c.Properties
-                                .Where(p => !p.Type.IsPrimitive || p.Type.IsEnum )
-                                .Select(p => p.Type.Name)
-                                .Distinct()
-                                .Select(name => "import { " + name  + " } from './" + ToKebabCase(name.ToString()) + "';")
-                                .Aggregate("", (all,import) => $"{all}{import}\r\n")
-                                .TrimStart() + (c.BaseClass != null || c.Methods.Any(pr => !pr.Type.IsPrimitive || pr.Type.IsEnum) ? "\r\n" : "");
-
-}$Classes(*Controller)[$ImportsList $Imports export class $ServiceName {
+}$Classes(*Controller)[$Imports 
+export class $ServiceName {
        constructor(private http: IHttpService) { }
 $Methods[
        public $name = ($Parameters[$name: $Type][, ]) => {

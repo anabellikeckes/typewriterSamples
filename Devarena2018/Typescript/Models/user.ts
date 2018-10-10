@@ -4,7 +4,6 @@
        name: string;
        email: string;
        phoneNumber: string;
-       isActive: boolean;
 }
 
     
