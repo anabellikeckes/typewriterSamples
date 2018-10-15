@@ -20,7 +20,7 @@ namespace Devarena2018.Controllers
 
         [HttpGet]
         [Produces(typeof(List<User>))]
-        public async Task<List<User>> GetAll()
+        public async Task<IEnumerable<User>> GetAll()
         {
             await _task;
             return null;

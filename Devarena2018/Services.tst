@@ -19,6 +19,8 @@
              return "Typescript/Services/" + ToKebabCase(file.Name.Replace("Controller.cs", ".service.ts"));
         };
     }
+    
+    string ReturnType(Method m) => m.Type.Name == "IHttpActionResult" ? "<void>" : "<" + m.Type.Name +">";
 
     string Imports(Class objClass)
     {
@@ -38,10 +40,10 @@
 
 }$Classes(*Controller)[$Imports 
 export class $ServiceName {
-       constructor(private http: IHttpService) { }
+       constructor(private http: HttpClient) { }
 $Methods[
        public $name = ($Parameters[$name: $Type][, ]) => {
-           return this.http.$Verb$Type[$IsGeneric[$TypeArguments][<void>]](`$Route`, { $Parameters[$name: $name][, ] });
+           return this.http.$Verb$ReturnType(`$Route`, { $Parameters[$name: $name][, ] });
       }]
 }]
     
